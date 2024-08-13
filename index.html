@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./public/css/styles.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="sr-only">Card Details</h1>
+    </header>
+
+    <main>
+      <div class="header">
+        <div class="card-container">
+          <div class="card-container-img">
+            <div class="img">
+              <img src="./public/images/bg-card-back.png" alt="card" />
+              <div class="back-card-content">
+                <p class="cvc-text">000</p>
+              </div>
+            </div>
+            <div class="img shadow">
+              <img src="./public/images/bg-card-front.png" alt="card-front" />
+              <div class="front-card-content">
+                <div class="first-flex">
+                  <div class="first-flex-items-container">
+                    <div class="first-flex1"></div>
+                    <div class="first-flex2"></div>
+                  </div>
+                </div>
+                <div class="second-flex">
+                  <p class="spanP">
+                    <span class="first-span span">0000</span>
+                    <span class="second-span span">0000</span>
+                    <span class="third-span span">0000</span>
+                    <span class="fourth-span span">0000</span>
+                    <span class="fifth-span"></span>
+                  </p>
+                </div>
+                <div class="third-flex">
+                  <p>
+                    <span class="name-on-card">Jane Appleseed</span>
+                    <span class="exp-on-card">
+                      <span class="exp-mm-on-card">00</span> /
+                      <span class="exp-yy-on-card">00</span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="form">
+        <div class="complete-container hidden">
+          <img src="./public/images/icon-complete.svg" alt="icon-complete" />
+          <h3>Thank you!</h3>
+          <p>We've added your card details</p>
+          <button onclick="handleContinueButton()">Continue</button>
+        </div>
+        <form action="https://fuckyou.com" method="post" class="">
+          <label for="cardholder-name">
+            Cardholder Name
+            <input
+              id="cardholder-name"
+              class=""
+              name="cardholder-name"
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              required
+            />
+            <p class="error-description err-name hidden">
+              Please input the name on your card!
+            </p>
+          </label>
+
+          <label for="card-number">
+            Card Number
+            <input
+              onchange="updatechangeNum()"
+              type="text"
+              id="card-number"
+              class=""
+              name="card-number"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+            />
+            <p class="error-description err-num hidden">
+              Wrong Format, numbers only
+            </p>
+          </label>
+
+          <section class="cvc-exp">
+            <label for="expiration-date">
+              Exp. Date (MM/YY)
+              <div class="exp">
+                <input
+                  type="number"
+                  class=""
+                  inputmode="numeric"
+                  id="expiration-mm"
+                  name="expiration-mm"
+                  min="0"
+                  max="12"
+                  placeholder="MM"
+                  required
+                />
+                <input
+                  type="number"
+                  min="0"
+                  max="99"
+                  id="expiration-yy"
+                  name="expiration-yy"
+                  placeholder="YY"
+                  required
+                />
+              </div>
+              <p class="error-description err-exp hidden">can't be blank</p>
+            </label>
+            <label for="cvc">
+              CVC
+              <input
+                type="number"
+                class=""
+                id="cvc"
+                name="cvc"
+                placeholder="e.g. 123"
+                min="0"
+                max="999"
+                required
+              />
+              <p class="error-description err-cvc hidden">can't be blank</p>
+            </label>
+          </section>
+
+          <input type="button" value="Confirm" class="form-button" />
+        </form>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://facebook.com/gwinjoe" target="_blank">Gwin Dev</a>.
+    </div>
+    <script src="./public/scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+:root {
+  --gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --white: hsl(0, 0%, 100%);
+  --red: hsl(0, 100%, 66%); /*for input errors*/
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  padding-top: 48vh;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000000px;
+  width: 0.5px;
+  height: 0.5px;
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 38vh;
+  background: url("../images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 38vh;
+  padding: 4vw;
+}
+
+.card-container .img {
+  width: 80%;
+  height: 65%;
+  position: absolute;
+}
+
+.card-container .img:nth-last-of-type(1) {
+  top: 19vh;
+}
+
+.card-container .img:nth-last-of-type(2) {
+  top: 5vh;
+  right: 4vw;
+}
+
+.back-card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.front-card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5%;
+}
+
+.front-card-content p {
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 500;
+}
+
+/*the card content styles*/
+
+.first-flex {
+  flex: 1.4;
+}
+
+.first-flex-items-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.first-flex1 {
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh;
+  background-color: white;
+  border: none;
+}
+
+.first-flex2 {
+  border-radius: 50%;
+  height: 2vh;
+  width: 2vh;
+  border: 1px solid white;
+  align-self: center;
+}
+
+.second-flex {
+  flex: 1;
+}
+
+.second-flex p {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+}
+
+.second-flex p ::-webkit-scrollbar {
+  display: none;
+}
+
+.third-flex p {
+  font-size: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+.back-card-content p {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.65rem;
+  position: relative;
+  top: 45%;
+  left: 80%;
+}
+
+label {
+  font-weight: 500;
+}
+
+input,
+button {
+  display: block;
+  width: 100%;
+  height: 7vh;
+  margin: 8px 0 30px 0;
+  border-radius: 10px;
+  border: 1px solid var(--light-grayish-violet);
+  padding: 14px;
+  box-shadow: 0 1px 3px var(--light-grayish-violet);
+  outline: none;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: var(--dark-grayish-violet);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+input:focus {
+  border-top: 1px solid hsl(249, 99%, 64%);
+  border-left: 1px solid hsl(249, 99%, 64%);
+  border-bottom: 1px solid hsl(278, 94%, 30%);
+  border-right: 1px solid hsl(278, 94%, 30%);
+  border-radius: 10px;
+}
+
+input[type="button"],
+button {
+  background: url("../images/bg-main-mobile.png");
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  height: 9vh;
+  cursor: pointer;
+  margin: 10px 0 5px 0;
+}
+
+button {
+  max-width: 350px;
+}
+
+main > section,
+main > section > .complete-container {
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+main > section > .hidden {
+  display: none;
+}
+.form h3 {
+  color: var(--very-dark-violet);
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+.form p {
+  color: var(--dark-grayish-violet);
+  font-weight: 500;
+  margin-top: -10px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+form {
+  max-width: 400px;
+  text-transform: uppercase;
+  color: var(--very-dark-violet);
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.exp {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.cvc-exp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.error {
+  border: 1px solid var(--red);
+}
+
+form .error-description {
+  color: var(--red);
+  margin-top: -20px;
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .card-container {
+    padding: 8vw;
+  }
+  .card-container .img {
+    width: 70%;
+    height: 65%;
+    position: absolute;
+  }
+
+  .card-container .img:nth-last-of-type(2) {
+    top: 5vh;
+    right: 8vw;
+  }
+
+  .back-card-content p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .second-flex p {
+    font-size: 1.75rem;
+    letter-spacing: 4px;
+    justify-content: space-between;
+  }
+
+  .third-flex p {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+
+  form {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    padding: 0;
+    height: 100%;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    position: static;
+    height: 100%;
+    background: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-container {
+    position: static;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: end;
+    padding: 0;
+    border: 1px solid black;
+  }
+
+  .card-container-img {
+    position: static;
+    display: flex;
+    height: 50vh;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    gap: 30px;
+  }
+
+  .card-container .img {
+    position: relative;
+    width: 90%;
+    height: 70%;
+    min-width: 425px;
+    min-height: 250px;
+  }
+
+  .back-card-content {
+    position: absolute;
+  }
+
+  .back-card-content p {
+    font-size: 0.9rem;
+  }
+
+  .front-card-content {
+    position: absolute;
+  }
+
+  .second-flex p {
+    font-size: 1.65rem;
+    letter-spacing: 3px;
+  }
+
+  .third-flex p {
+    font-size: 0.8rem;
+  }
+
+  main > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 15%;
+  }
+
+  form {
+    width: 50%;
+    min-width: 350px;
+    font-size: 0.85rem;
+  }
+
+  input {
+    height: 7vh;
+  }
+
+  .card-container .img:nth-last-of-type(1) {
+    top: 0;
+    left: 25%;
+  }
+
+  .card-container .img:nth-last-of-type(2) {
+    top: 0;
+    left: 45%;
+  }
+}
