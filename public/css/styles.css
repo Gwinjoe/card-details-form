@@ -28,6 +28,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 body {
   padding-top: 45vh;
 }
