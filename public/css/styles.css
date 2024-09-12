@@ -35,6 +35,8 @@ html, body {
   overflow-x: hidden;
 }
 
+
+
 body {
   padding-top: 45vh;
 }
@@ -45,7 +47,8 @@ body {
   left: -10000000px;
   width: 0.5px;
   height: 0.5px;
-  overflow: hidden;
+  overflow-x: hidden;
+
 }
 
 .header {
@@ -66,7 +69,7 @@ body {
 
 .card-container {
   position: absolute;
-  top: 0;
+  top: 0;  
   left: 0;
   right: 0;
   height: 38vh;
@@ -90,6 +93,7 @@ body {
 
 .back-card-content {
   position: absolute;
+  overflow-x:hidden;
   top: 0;
   left: 0;
   bottom: 0;
